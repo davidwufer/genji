@@ -34,8 +34,15 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
 end
 
+# Haml
+gem "haml-rails", "~> 0.9"
+
 # Spring for rspec
 gem 'spring-commands-rspec', group: :development
+
+gem "therubyracer"
+gem "less-rails"
+gem "twitter-bootstrap-rails"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
