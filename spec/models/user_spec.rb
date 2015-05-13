@@ -19,10 +19,18 @@ RSpec.describe User, :type => :model do
 
     describe "email" do
       it "requires an email" do
+        user = User.new(username: "hobowufer", password: "test1234")
+        expect(user.save).to be(false)
       end
 
-      it "can use existing emails" do
-      end
+      # Because Devise enforces uniqueness on email by default
+      # it "can use existing emails" do
+      #   user = User.new(username: "hobowufer", email: "hobo@wufer.com", password: "test1234")
+      #   expect(user.save).to be(true)
+      #
+      #   bad_user = User.new(username: "linktothepast", email: "hobo@wufer.com", password: "test1234")
+      #   expect(bad_user.save).to be(true)
+      # end
     end
   end
 end
