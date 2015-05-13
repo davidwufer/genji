@@ -15,6 +15,9 @@ RSpec.describe User, :type => :model do
         bad_user = User.new(username: "hobowufer", email: "hobo@woofer.com", password: "test1234")
         expect(bad_user.save).to be(false)
       end
+
+      it "only allows certain characters"
+
     end
 
     describe "email" do
