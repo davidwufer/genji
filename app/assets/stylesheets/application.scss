@@ -15,5 +15,15 @@
  */
 
  // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
- @import "bootstrap-sprockets";
- @import "bootstrap";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.header {
+  width: 100%;
+  display: block;
+}
+
+// For the navbar
+body {
+  // padding-top: 70px;
+}

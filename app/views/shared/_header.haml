@@ -1,9 +1,17 @@
-.header
-  %h1 Genji
-  - if user_signed_in?
-    = current_user.username
-    = link_to "Sign out", destroy_user_session_path, method: :delete
-  - else
-    .login
-      = link_to "Sign in", new_user_session_path
-      = link_to "Sign up", new_user_registration_path
+%header.navbar.navbar-default.navbar-static-top
+  .container
+    .navbar-header
+      .navbar-brand Genji
+    %nav
+
+    %ul.nav.navbar-right.navbar-nav
+      - if user_signed_in?
+        %li
+          = link_to current_user.username, edit_user_registration_path
+        %li
+          = link_to "Sign out", destroy_user_session_path, method: :delete
+      - else
+        %li
+          = link_to "Sign in", new_user_session_path
+        %li
+          = link_to "Sign up", new_user_registration_path
